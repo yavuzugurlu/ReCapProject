@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    class ReCapContext:DbContext
+    public class ReCapContext:DbContext
     {
         //override on en üstteki tabloları ilişkilendirme
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
