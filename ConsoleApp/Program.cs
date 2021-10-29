@@ -11,7 +11,7 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             //fun1();
-            CarTest();
+            //CarTest();
            //arabaekle();
         }
 
@@ -24,7 +24,7 @@ namespace ConsoleApp
         private static void fun1()
         {
             CarManager carManager = new CarManager(new EfCarDal());
-            foreach (var car in carManager.GetAll())
+            foreach (var car in carManager.GetAll().Data)
             {
                 Console.WriteLine(car.Description);
             }
@@ -33,7 +33,7 @@ namespace ConsoleApp
         {
             CarManager carManager = new CarManager(new EfCarDal());
 
-            foreach (var car in carManager.GetCarDetail())
+            foreach (var car in carManager.GetCarDetail().Data)
             {
                 Console.WriteLine(car.CarId +" / "+car.CarName +" / "+ car.ColorName + " / " + car.DailyPrice);
             }
